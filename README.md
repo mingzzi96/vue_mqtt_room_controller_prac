@@ -1,4 +1,4 @@
-# npm run serve하기 전에 env 파일 생성하셈
+# npm install 및 npm run serve하기 전에 env 파일 생성하셈
 
 # VUE_APP_API_URL= 로컬 네트워크 주소
 
