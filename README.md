@@ -189,7 +189,7 @@ port에는 당연히 아까 설정해 줬던 websocket 포트 번호를 넣어�
 내 로컬에서 내가 스스로 방에 온도 체크하는 기계가 되었다고 생각해 보고 publish 날려보면 됨 ㅋㅋㅋ
 
 ```
-mosquitto_pub -h 내 네트워크 주소 -p 10000 -t 'control' -m 'tooCold'
+mosquitto_pub -h 내 네트워크 주소 -p 내 로컬 mqtt 포트 -t 'control' -m 'tooCold'
 ```
 
 원격제어 켜기 버튼을 눌러서 mqtt 실행 시키고
@@ -207,7 +207,7 @@ this.client.subscribe("control");
 춥다 했더니 보일러 켜줌!
 
 ```
-mosquitto_pub -h 내 네트워크 주소 -p 10000 -t 'control' -m 'tooHot'
+mosquitto_pub -h 내 네트워크 주소 -p 내 로컬 mqtt 포트 -t 'control' -m 'tooHot'
 ```
 
 너무 덥다고 보내면 보일러 꺼줄거고, 원격제어 끄기 버튼 누르면 mqtt 통신이 종료될 것임~~
